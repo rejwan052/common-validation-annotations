@@ -22,13 +22,13 @@ import javax.validation.constraints.Size;
 @Constraint(validatedBy = NumberLengthValidator.class)
 public @interface NumberLength {
 
-    String message() default "{Number contains too many digits}";
+    String message() default "{Number of digits is out of bounds}";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 
-    int min();
+    int min() default 0;
 
-    int max();
+    int max() default Integer.MAX_VALUE;
 }

@@ -2,3 +2,5 @@
 .project
 .settings/
 target/
+common-validation-annotations.iml
+.idea/
